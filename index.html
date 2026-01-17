@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Algo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="border-frame">
+        <div class="border-top"></div>
+        <div class="border-right"></div>
+        <div class="border-bottom"></div>
+        <div class="border-left"></div>
+    </div>
+    <div class="container">
+        <img src="../images/antialgo-logo@100x.png" alt="Anti-Algo" class="logo">
+        
+        <div class="input-section">
+            <label for="input-text">Input</label>
+            <textarea id="input-text" placeholder="Enter text to perturb..." aria-label="Input text area" autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>
+        </div>
+        
+        <div class="mode-section">
+            <label>Mode</label>
+            <div class="mode-toggle" role="group" aria-label="Mode selection">
+                <button id="mode-human" class="mode-btn active" data-mode="human">Human-friendly</button>
+                <button id="mode-glitch" class="mode-btn" data-mode="glitch">Heavy glitch</button>
+                <button id="mode-patterned" class="mode-btn" data-mode="patterned">Patterned (Tatreez-inspired)</button>
+            </div>
+            <p class="mode-helper">Patterned mode uses rhythmic, border-based perturbation inspired by embroidered systems of encoded memory.</p>
+        </div>
+        
+        <div class="controls">
+            <div class="intensity-control">
+                <label for="intensity">Intensity</label>
+                <input type="range" id="intensity" min="0" max="1" step="0.1" value="0.6" aria-label="Intensity slider">
+                <span id="intensity-value">0.6</span>
+            </div>
+            
+            <button id="perturb-btn">Perturb It</button>
+            <button id="clear-btn" class="clear-btn">Clear</button>
+        </div>
+        
+        <div class="output-section">
+            <label for="output-text">Output</label>
+            <div class="lock-row">
+                <label class="lock-label">
+                    <input type="checkbox" id="lock-toggle" />
+                    Lock output
+                </label>
+            </div>
+            <textarea id="output-text" readonly placeholder="Perturbed text will appear here..." aria-label="Output text area" autocapitalize="off" autocorrect="off" spellcheck="false"></textarea>
+        </div>
+        
+        <div class="actions">
+            <button id="copy-btn">Copy</button>
+            <button id="copy-tr-btn" class="secondary">Copy for Text Replacement</button>
+            <button id="normalize-btn" class="secondary">Normalize back</button>
+            <span id="copied-status" class="copied-status" aria-live="polite"></span>
+        </div>
+        
+        <div class="examples-section">
+            <h2>Examples</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-before">
+                        <span class="example-label">Before:</span>
+                        <span class="example-text">Some voices are amplified. Others are quietly filtered out.</span>
+                    </div>
+                    <div class="example-after">
+                        <span class="example-label">After:</span>
+                        <span class="example-text">Sσmє vσісеѕ аrє аmрⅼіfієd. Oтhєrѕ аrє quієтⅼу fіⅼтєrєd συт.</span>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-before">
+                        <span class="example-label">Before:</span>
+                        <span class="example-text">Certain histories are flagged more often than others.</span>
+                    </div>
+                    <div class="example-after">
+                        <span class="example-label">After:</span>
+                        <span class="example-text">Cєrtаіn hіѕтσrієѕ аrє fⅼаggєd mσrє σftєn тhаn σтhєrѕ.</span>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-before">
+                        <span class="example-label">Before:</span>
+                        <span class="example-text">Not all grief is permitted the same visibility.</span>
+                    </div>
+                    <div class="example-after">
+                        <span class="example-label">After:</span>
+                        <span class="example-text">Nσт аⅼⅼ grієf іѕ рєrmіттєd тhє ѕаmє vіѕіbіⅼітy.</span>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-before">
+                        <span class="example-label">Before:</span>
+                        <span class="example-text">Visual language resists perfect capture.</span>
+                    </div>
+                    <div class="example-after">
+                        <span class="example-label">After:</span>
+                        <span class="example-text">Vіѕυаⅼ ⅼаnguаgє rєѕіѕтѕ рєrfєct сартurє.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            Anti-Algo does not guarantee safety or evasion. It documents the labor required to speak under algorithmic moderation.
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
